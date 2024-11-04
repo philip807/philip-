@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width"=device-width, initial-scale="1.0">
+    <tittle>E-COMMERCE WEBSITE</tittle>
+    <link rel="stylesheet" href="styles.CSS">
+</head>
+
+<body>
+    <h1>GROUP MEMBERS</h1>
+    <ol>
+        <li>James Mwendwa BBA/00009/023</li>
+        <li>Mercy Ndanu BEF/00082/023</li>
+    </ol>
+    <header>
+        <h1>
+            Welcome to our E-commerce website
+        </h1>
+        <nav>
+            <a href="#Home">Home</a> <br />
+            <a href="#Shop">Shop</a> <br />
+            <a href="#About Us">About Us</a><br />
+            <a href="#Contact Us">Contact Us</a> <br />
+        </nav>
+    </header>
+    <main>
+        <h2>
+            Main features of the website and navigation links
+        </h2>
+        <p><strong>WELCOME!!! </strong> to this amazing website to shop quality and quantity products from us</p>
+    </main>
+    <footer>
+        <p>&copy; 2024 Our E-commerce Website. All rights reserved.</p>
+        <div class="Social Meadia-links">
+            <a href="https://facebook.com" target="_blank">Facebook</a><br />
+            <a href="https://youtube.com" target="_blank">Youtube</a><br />
+            <a href="https://twitter.com" target="_blank">Twitter</a><br />
+        </div>
+        <p>Contact us: informaton@Ourecommerce.com | phone: (254) 114-732-008 : (254) 712-246-269</p>
+    </footer>
+    <header>
+        <h1>Product Catolog</h1>
+    </header>
+    <div class="catalog-container">
+        <label for="category">Filter by category:</label>
+        <select id="category">
+            <aside class="filter-sidebar">
+                <h2>Filter Products</h2>
+                <div class="filter-category">
+                    <h3>Category</h3>
+                    <label><input type="checkbox" name="category" value="Cereals">Cereals</label>
+                    <label><input type="checkbox" name="category" value="Cosmetics">Cosmetics</label>
+                    <label><input type="checkkbox" name="category" value="Clothing">Clothing</label>
+                    <label><input type="checkbox" name="category" value="Stationary">Stationary</label>
+                </div>
+                <div class="filter-price">
+                    <h3>Price Range</h3>
+                    <label>Min: <input type="number" id="min-price" placeholder="0"></label>
+                    <label>Max: <input type="number" id="max-price" placeholder="5000"></label>
+                    <button onclick="applyFilters()">Apply</button>
+                </div>
+            </aside>
+            <main class="catalog">
+                <header class="Catalog-header">
+                    <h1>Product Catalog</h1>
+                    <select id="sort-options" onchange="sortproducts()">
+                        <option value="default">sort by</option>
+                        <option value="price-asc">Price: Low to high</option>
+                        <option value="price-desc">Price: High to Low</option>
+                    </select>
+                </header>
+                <div class="product-grid" id="product=grid">
+                </div>
+            </main>
+    </div>
+    <script>
+        const products = [
+            {
+                tittle: "laptop", category: "electronics", price: 800,
+                description: "High-performance laptop", image: "laptop.jpg"
+            },
+            {
+                tittle: "T-shirt", category: "fashion", price: 100,
+                description: "100% cotton T-shirt.", image: "t-shirt.jpg"
+            },
+            {
+                tittle: "Blender", category: "home", price: 3000,
+                description: "High-speed blender.", image: "blender.jpg"
+
+            },
+            {
+                tittle: "smartphone", category: "electronics", price: 4000,
+                description: "Latest model smartphone.", image: "smartphone.jpg"
+            },
+            {
+                tittle: "jacket", category: "fashion", price: 1200,
+                description: "Stylish and warm jacket.", image: "jacket.jpg"
+            },
+        ];
+        function displayProducts(filteredProducts) {
+            const productGrid = document.getElementByld("product-grid");
+            productGrid.innerHTML = ""; oooooooooooo
+            document.createdElement("div");
+            productCard.classList.add("product-card");
+            productCard.innerHTML =
+                <img src="ksh{product.image}" alt="ksh{product.tittle}">
+                    <h3 class="product-tittle"> ksh{product.tittle}</h3>
+                    <p>ksh{product.description}</p>
+                    <span class="product-price"> ksh{product.price}</span>
+                    ';
+                    productGrid.appendChild(productCard);
+
+
+            }
+                    function applyFilters(){const selectedCategories=Array.from(document.QuerySelectorALL(input{name = "category"}))}
+
+    </script>
+
+</body>
