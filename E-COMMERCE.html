@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - E-Commerce Website</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+        }
+
+        nav a {
+            color: blue;
+            text-decoration: solid;
+        }
+
+        header,
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            border-width: 10px;
+            border-radius: 30px;
+            border: solid;
+        }
+
+        .product,
+        .product-detail,
+        #cart-items {
+            padding: 20px;
+            margin: 0 15px;
+            border: 1px solid #add;
+        }
+
+        button {
+            background-color: #5cb85c;
+            cursor: pointer;
+            color: white;
+            border-color: blueviolet;
+            border-radius: 10px;
+        }
+    </style>
+
+    <header>
+        <h1>Welcome to Our E-Commerce Website</h1>
+        <nav>
+            <a href="index.html">Home</a><br />
+            <a href="product-list.html">Shop</a><br />
+            <a href="about.html">About Us</a><br />
+            <a href="contact.html">Contact Us</a><br />
+        </nav>
+    </header>
+    <main>
+        <h2>Featured Products</h2>
+        <!-- Featured products grid -->
+    </main>
+    <footer>
+        <p>&copy; 2024 E-Commerce Store. All rights reserved.</p>
+        <a href="#">Facebook</a><br />
+        <a href="#">Twitter</a><br />
+        <a href="#">Instagram</a><br />
+    </footer>
+</body>
+
+</html>
+
+product-list.html - Product Listing Page
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Listing</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Our Products</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="cart.html">Cart</a>
+        </nav>
+    </header>
+    <main>
+        <div id="product-list">
+            <!-- Products will be listed here -->
+            <div class="product">
+                <img src="images/product1.jpg" alt="Product 1">
+                <h3>Product 1</h3>
+                <p>ksh1000.00</p>
+                <a href="product-detail.html">View Details</a>
+                <h4>Product 2</h4>
+                <p>ksh2000.00</p>
+                <img src="Laptop.jpg" alt="product 2">
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
+
+product-detail.html - Product Detail Page
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Product Details</h1>
+    </header>
+    <main>
+        <div class="product-detail">
+            <img src="images/product1.jpg" alt="Product 1">
+            <h2>Product 1</h2>
+            <p>ksh1000.00</p>
+            <p>This is a detailed description of Product 1.</p>
+            <button onclick="addToCart()">Add to Cart</button>
+        </div>
+        <button onclick="cart" ()>Cart</button>
+        <script>function addToCart(product) {
+                cart.push(product);
+                alert("Added to cart!");
+                console.log(cart);
+            }</script>
+
+</body>
+
+</html>
+
+cart.html - Shopping Cart Page
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Your Shopping Cart</h1>
+    </header>
+    <main>
+        <div id="cart-items">
+            <!-- Cart items will be displayed here -->
+        </div>
+        <button onclick="checkout()">Proceed to Checkout</button>
+    </main>
+</body>
+
+</html>
+
+checkout.html - Checkout Page
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <button onclick="checkout">Checkout</button>
+    <script>function checkout() {
+            if (cart.length === 0) {
+                alert("Cart is empty");
+            } else {
+                alert("Proceeding to checkout...");
+                // Logic to go to checkout page
+            }
+        }</script>
+    <header>
+        <h1>Checkout</h1>
+    </header>
+    <main>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" required>
+
+            <label for="address">Address:</label>
+            <input type="text" id="address" required>
+
+            <label for="payment">Payment Method:</label>
+            <select id="payment">
+                <option value="credit">Credit Card</option>
+                <option value="paypal">PayPal</option>
+            </select>
+
+            <button type="submit">Submit Order</button>
+        </form>
+    </main>
+</body>
+
+</html>
