@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Management System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            background-color: #444;
+            padding: 1rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+        }
+
+        nav a:hover {
+            background-color: #666;
+            border-radius: 5px;
+        }
+
+        .container {
+            padding: 2rem;
+        }
+
+        section {
+            margin-bottom: 2rem;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        label,
+        input,
+        select,
+        textarea,
+        button {
+            display: block;
+            margin: 0.5rem 0;
+            padding: 0.5rem;
+            width: 100%;
+            max-width: 400px;
+        }
+
+        button {
+            background-color: #333;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Employee Management System</h1>
+    </header>
+
+    <nav>
+        <a href="#registration">Registration</a>
+        <a href="#login">Login</a>
+        <a href="#finance">Finance</a>
+        <a href="#departments">Departments</a>
+        <a href="#procurement">Procurement</a>
+        <a href="#leave">Leave</a>
+    </nav>
+
+    <div class="container">
+        <!-- Registration Module -->
+        <section id="registration">
+            <h2>Registration</h2>
+            <form>
+                <label for="emp-name">Employee Name</label>
+                <input type="text" id="emp-name" name="emp-name" required>
+
+                <label for="emp-id">Employee ID</label>
+                <input type="text" id="emp-id" name="emp-id" required>
+
+                <label for="emp-email">Email</label>
+                <input type="email" id="emp-email" name="emp-email" required>
+
+                <label for="emp-department">Department</label>
+                <select id="emp-department" name="emp-department">
+                    <option value="finance">Finance</option>
+                    <option value="hr">HR</option>
+                    <option value="it">IT</option>
+                    <option value="marketing">Marketing</option>
+                </select>
+
+                <button type="submit">Register</button>
+            </form>
+        </section>
+
+        <!-- Login Module -->
+        <section id="login">
+            <h2>Login</h2>
+            <form>
+                <label for="login-email">Email</label>
+                <input type="email" id="login-email" name="login-email" required>
+
+                <label for="login-password">Password</label>
+                <input type="password" id="login-password" name="login-password" required>
+
+                <button type="submit">Login</button>
+            </form>
+        </section>
+
+        <!-- Finance Module -->
+        <section id="finance">
+            <h2>Finance</h2>
+            <form>
+                <label for="salary">Salary</label>
+                <input type="number" id="salary" name="salary" required>
+
+                <label for="bonus">Bonus</label>
+                <input type="number" id="bonus" name="bonus">
+
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+
+        <!-- Departments Module -->
+        <section id="departments">
+            <h2>Departments</h2>
+            <form>
+                <label for="department-name">Department Name</label>
+                <input type="text" id="department-name" name="department-name" required>
+
+                <label for="department-head">Department Head</label>
+                <input type="text" id="department-head" name="department-head">
+
+                <button type="submit">Add Department</button>
+            </form>
+        </section>
+
+        <!-- Procurement Module -->
+        <section id="procurement">
+            <h2>Procurement</h2>
+            <form>
+                <label for="item-name">Item Name</label>
+                <input type="text" id="item-name" name="item-name" required>
+
+                <label for="quantity">Quantity</label>
+                <input type="number" id="quantity" name="quantity" required>
+
+                <label for="supplier">Supplier</label>
+                <input type="text" id="supplier" name="supplier">
+
+                <button type="submit">Submit Request</button>
+            </form>
+        </section>
+
+        <!-- Leave Module -->
+        <section id="leave">
+            <h2>Leave</h2>
+            <form>
+                <label for="leave-type">Leave Type</label>
+                <select id="leave-type" name="leave-type">
+                    <option value="sick">Sick Leave</option>
+                    <option value="vacation">Vacation Leave</option>
+                    <option value="maternity">Maternity Leave</option>
+                </select>
+
+                <label for="start-date">Start Date</label>
+                <input type="date" id="start-date" name="start-date" required>
+
+                <label for="end-date">End Date</label>
+                <input type="date" id="end-date" name="end-date" required>
+
+                <button type="submit">Submit Leave Request</button>
+            </form>
+        </section>
+    </div>
+
+</body>
+
+</html>
