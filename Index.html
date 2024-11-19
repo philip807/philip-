@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device,initial-scale=1.0">
+    <tittle>Document</tittle>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://unpkg.com@1.6.7/dist/axios.min.js"></script>
+</head>
+
+<body>
+    <div class="weather-app">
+        <header>
+            <div>
+                <h2>
+                    Welcome to our Weather application
+                </h2>
+            </div>
+        </header>
+        <main>
+            <div>
+                <form action="" class="search-form" id="search-form">
+                    <input type="search" name="city" id="city-name" placeholder="Enter city name" required
+                        class="form-input" />
+                    <button type="submit" class="form-button">search</button>
+                </form>
+            </div>
+            <div class="weather-data">
+                <h3>Paris</h3>
+                <!--
+                <h3>
+                    ☀18
+                    <strong>deg</strong>
+                </h3>
+                -->
+                <div class="weather-app-temperature-container">
+                    <div class="" id="weather-app-icon">
+                        <img scr="https://static.vecteezy.com/system/resources/previews/016/774/561/non_2x/loading-icon-loading-progress-icon-on-transparent-background-free-png.png"
+                            alt="not loading" class="weather-app-icon" />
+                    </div>
+                    <div class="weather-app-temperature" id="currenttemperaturevalue">12</div>
+                    <div class="weather-app-unit">deg</div>
+                </div>
+            </div>
+            <div>
+                <p>
+                    <span id="weatherdescription">
+                        scattered clouds
+                    </span>
+                    <br />
+                    Humidity:
+                    <span id="Humidity" class="Humidity">
+                        66
+                    </span>
+                    ,Wind Speed:
+                    <span id="windspeed">
+                        4.3
+                    </span>
+                </p>
+            </div>
+        </main>
+        <footer>
+            <div>
+                Coded by <a href="https://github.com/" target="-blank">Philip Kimeu </a>
+                and is on
+                <a href="https://github.com/week7-Weather-API" target="-blank">Github</a>
+                and hosted by
+                <a href="https://philipweatherapp.netfly.app/" target="-blank">Netfly.</a>
+                <br>
+                The design was done using <a href="https://www.figma.com/" target="-blank">Figma</a>
+            </div>
+        </footer>
+    </div>
+    <script scr="index.js"></script>
+</body>
+
+</html>
